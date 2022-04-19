@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block icon %}<link rel='icon' href='{{ url_for('static', path='styles/platypus.png') }}'/>{% endblock %}
+
+{% block stylesheet %}<link rel='stylesheet' href='{{ url_for('static', path='styles/fonts/stylesheet.css') }}'/>
+        <link rel='stylesheet' href='{{ url_for('static', path='styles/cascade.css') }}'/>{% endblock %}
+
+{% block body%}<div class='main'>
+            <form id='calculator' method='POST'>
+                <div id='calculator-reference'>
+                    <div class='icon'></div>
+                    <div class='calculator-name'>PLATYPUS</div>
+                </div>
+                <div id='screen'>
+                    <input type='text' id='input-screen' class='screen-line' name='entry'/>
+                    <div id='output-screen' class='screen-line'>{{ result }}</div>
+                </div>
+                <input type='submit' id='submit-button' value='EXE'/>
+            </form>
+        </div>{% endblock %}
+
+{% block javascript %}<script src='{{ url_for('static', path='scripts/main.js') }}'></script>{% endblock %}

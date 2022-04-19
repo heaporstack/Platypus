@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang='{{ language }}'>
+    <head>
+        <meta charset='utf-8'/>
+        <title>{{ title }}</title>
+        {% block icon %}{% endblock %}
+        {% block stylesheet %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+    {% block javascript %}{% endblock %}
+</html>
